@@ -8,7 +8,9 @@ const allowedOrigins = [
   'http://localhost:5173',
   'https://ephemeral-starlight-fc99d4.netlify.app',
   'https://polite-sprite-12327d.netlify.app',
-  'https://charming-valkyrie-effcea.netlify.app'
+  'https://charming-valkyrie-effcea.netlify.app',
+  'https://reset-password-taskk.netlify.app'
+
 ];
 
 const corsOptions: cors.CorsOptions = {
