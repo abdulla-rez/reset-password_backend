@@ -6,22 +6,22 @@ import { User } from './User';
 @Entity()
 export class ResetToken {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @ManyToOne(() => User, user => user.resetTokens, {
     onDelete: 'CASCADE',
   })
-  user: User
+  user!: User
 
   @Column()
-  token: string;
+  token!: string;
 
   @Column()
-  expires_at: Date;
+  expires_at!: Date;
 
   @Column({ default: false })
-  used: boolean;
+  used!: boolean;
 
   @CreateDateColumn()
-  created_at: Date;
+  created_at!: Date;
 }

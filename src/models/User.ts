@@ -6,20 +6,20 @@ import { ResetToken } from './ResetToken';
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  name: string;
+  name!: string;
 
   @Column({ unique: true })
-  email: string;
+  email!: string;
 
   @Column()
-  password: string;
+  password!: string;
 
   @CreateDateColumn()
-  created_at: Date;
+  created_at!: Date;
 
   @OneToMany(() => ResetToken, token => token.user)
-  resetTokens: ResetToken[];
+  resetTokens!: ResetToken[];
 }
